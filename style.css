@@ -95,10 +95,31 @@ p {
   transform: translate(-50%, -50%);
 }
 
+@media (min-width: 640px) and (max-width: 1080px){
+  #txt {
+    top: 47%;
+  }
+}
+
+
 #greeting {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
+
+@media (min-width: 640px) and (max-width: 1080px){
+  #greeting {
+    font-size: 48px;
+  }
+}
+
+.search {
+  position: absolute;
+  /*left: 50%;*/
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
 
 /*------ Animated background ------- */
 .area {
@@ -219,12 +240,3 @@ p {
 }
 
 /* ---------- background animation end ----------- */
-
-.word {
-  height: 100%;
-  display: flex;
-  margin: auto;
-  color: white;
-  font: 700 normal 2.5em 'Poppins';
-  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
-}
