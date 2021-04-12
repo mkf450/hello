@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  </head>
+  <body onload="startTime()">
+    <section class="halo">
+      <div class="container row">
+        <div id="txt"></div>
+        <div class="center">
+         <h1 id="greeting"></h1>
+        </div>
+      </div>
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <script type="text/javascript">
+      function startTime(){
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+
+      function checkTime(i){
+        if (i < 10) {
+          i = "0" + i;
+        } return i;
+      }
+
+      document.getElementById('greeting').innerHTML = [ "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Morning", "Afternoon", "Afternoon", "Afternoon", "Afternoon", "Afternoon", "Afternoon", "Evening", "Evening", "Evening", "Evening", "Evening", "Evening"][(new Date).getHours()] + ", Pika";
+    </script>
+  </body>
+</html>
